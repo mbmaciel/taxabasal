@@ -1,0 +1,50 @@
+doctype html
+html(lang=pt)
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Some description')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet',href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/main.css')
+  body
+
+    block content
+    .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1= message
+    form(method='POST' action='/calcular')
+      div.form-group
+      label(for='peso') Peso (em Kg):
+      input#peso.form-control(type='text', placeholder='digite seu peso' name='peso')
+      div.form-group
+      label(for='altura') Estatura (em cm):
+      input#estatura.form-control(type='text', placeholder='digite sua estatura' name='altura')
+      div.form-group
+      label(for='idade') Idade:
+      input#idade.form-control(type='text', placeholder='digite sua idade' name='idade')
+      div.form-group
+      label(for='sexo') Sexo:
+      select#sexo.form-control(name='sexo')
+        option(value='0', selected= true) -- Selecione o sexo --
+        option(value='m' ) Masculino
+        option(value='f') Feminino
+      div.form-group
+      label(for='atv') Atividade Fisica:
+      select#atv.form-control(name='atv')
+        option(value='0', selected= true) -- Tipo de atividade física --
+        option(value='1' ) Sedentario(a)
+        option(value='2') Atividade Ligeira (1 a 2 vezes por semana)
+        option(value='3') Atividade Moderada (3 a 5 vezes por semana)
+        option(value='4') Atividade Intensa (6 vezes por semana)
+        option(value='5') Atividade Muito Intensa (7 vezes por semana)
+      
+      button.btn.btn-primary(type='submit') Calcular
+
+
+block footer
+      footer
+        p © #{new Date().getFullYear()} Desenvolvido por Mbmaciel.com
+

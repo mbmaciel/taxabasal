@@ -1,0 +1,66 @@
+function calcular(){
+
+  var peso = document.getElementById("peso").value;
+var altura = document.getElementById("altura").value;
+var idade = document.getElementById("idade").value;
+
+
+var sexo = document.getElementById("sexo");
+sexoCont = sexo.options[sexo.selectedIndex].value;
+
+
+var atv = document.getElementById("atv");
+atvCont = atv.options[atv.selectedIndex].value;
+
+
+if(peso == "" || altura == "" || idade == ""){alert("nÃ£o Ã© possÃ­vel deixar campos vazios.");} else{
+
+if(sexoCont == "Masculino"){
+
+b1 = 13.7 * parseInt(peso);
+b2 = 5.0 * parseInt(altura);
+b3 = 6.8 * parseInt(idade);
+
+teste = 66 + b1 + b2 - b3;
+
+MB.innerHTML = teste;
+
+
+if(atvCont =="1"){teste2 = parseInt(teste) * 1.2; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15; }
+  else if(atvCont=="2"){teste2 = parseInt(teste) * 1.375; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;} 
+    else if(atvCont=="3"){teste2 = parseInt(teste) * 1.55; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;} 
+      else if(atvCont=="4"){teste2 = parseInt(teste) * 1.725; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;} 
+        else if(atvCont=="5"){ teste2 = parseInt(teste) * 1.9; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;}
+           
+
+
+
+
+
+
+//66 + (13,7 x Peso) + (5,0 x Altura em cm) â€“ (6,8 x Idade).
+
+
+} else if(sexoCont == "Feminino"){
+
+b1 = 9.6 * parseInt(peso);
+b2 = 1.8 * parseInt(altura);
+b3 = 4.7 * parseInt(idade);
+
+teste = 665 + b1 + b2 - b3;
+
+MB.innerHTML = teste;
+
+
+if(atvCont =="1"){teste2 = parseInt(teste) * 1.2; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15; }
+  else if(atvCont=="2"){teste2 = parseInt(teste) * 1.375; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;} 
+    else if(atvCont=="3"){teste2 = parseInt(teste) * 1.55; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;} 
+      else if(atvCont=="4"){teste2 = parseInt(teste) * 1.725; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;} 
+        else if(atvCont=="5"){ teste2 = parseInt(teste) * 1.9; CN.innerHTML = teste2 ; CE.innerHTML = parseInt(teste2)*0.85; CS.innerHTML = parseInt(teste2) * 1.15;}
+           
+
+}
+
+
+}
+}

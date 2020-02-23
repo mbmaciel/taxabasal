@@ -1,0 +1,21 @@
+doctype html
+html(lang=pt)
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Some description')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet',href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+  body
+
+  h1 Cálculo feito com sucesso
+
+  h5 Seu metabolismo basal #{teste}
+  h5 Calorias para manter o peso #{teste2}
+  h5 Calorias para emagrecer #{final}
+  h5 Calorias para subir de peso #{final2}
+
+  block footer
+      footer
+        p © #{new Date().getFullYear()} Desenvolvido por Mbmaciel.com
