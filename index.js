@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000
 
 // Bodyparser 
 var bodyParser = require('body-parser');
@@ -118,6 +119,6 @@ app.post('/calcular', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('server started');
 });
