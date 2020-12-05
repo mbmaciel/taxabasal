@@ -11,3 +11,4 @@ A taxa metabólica basal ou TMB é a quantidade de energia em quilocalorias (Kca
 Para descobrir a quantidade de calorias que precisa para fazer um dieta para emagrecer ou engordar.
 
 ## TODO
+Melhorar interface
